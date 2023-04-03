@@ -24,6 +24,7 @@ const Account = () => {
         <div class="center-screen">
                 <Avatar alt="Remy Sharp" src="./man3.jpg" sx={{ width: 80, height: 80 }}></Avatar>
                 
+                {/*Logged in username should appear on account page*/}
                 <div class="account-name">
                 {transactions && transactions.map((transaction, index) => (
                 <AccountName id={transaction._id} isUser={localStorage.getItem("userId") ===transaction.user._id} userName={transaction.user.name}/>
