@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {Avatar} from '@mui/material';
 import axios from 'axios';
-import VideoUploader from "./VideoUploader.js";
 import './Account.css';
 import AccountName from './AccountName.js';
+import FirebaseUpload from './FirebaseUpload.js';
 
 const Account = () => {
 
@@ -32,7 +32,7 @@ const Account = () => {
                 </div>
 
             <div class="details">
-                <VideoUploader />
+                <FirebaseUpload />
             </div>
 
             
