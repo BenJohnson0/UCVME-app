@@ -26,9 +26,9 @@ const Account = () => {
                 
                 {/*Logged in username should appear on account page*/}
                 <div class="account-name">
-                {transactions && transactions.map((transaction, index) => (
-                <AccountName id={transaction._id} isUser={localStorage.getItem("userId") ===transaction.user._id} userName={transaction.user.name}/>
-                ))} 
+                {[...new Set(transactions && transactions.map((transaction, index) => (
+                <AccountName id={transactions.user} userName={transaction.user.name}/>
+                )))]} 
                 </div>
 
             <div class="details">
