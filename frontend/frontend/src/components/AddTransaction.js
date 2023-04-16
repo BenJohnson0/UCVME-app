@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {Box, Button, InputLabel, TextField, Typography} from "@mui/material";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './AddTransaction.css';
 
 const AddTransaction = () => {
   const navigate = useNavigate();   
@@ -36,10 +37,10 @@ const AddTransaction = () => {
   }
    //defining object before rendering component 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <Box border={1} borderRadius={2} boxShadow="5px 5px 5px #ccc" padding={3} margin={"auto"} display='flex' flexDirection={'column'} width={"50%"} height={"10%"} marginTop={10}>
-          <Typography fontWeight={'bold'} padding={3} variant="h6" textAlign={'center'}>Post a Job</Typography>
+    <div class="create-job">
+      <form onSubmit={handleSubmit} >
+        <Box border={1} borderRadius={2} boxShadow="5px 5px 5px #ccc" padding={3} margin={"auto"} display='flex' flexDirection={'column'} width={"50%"} height={"10%"} marginTop={10} marginBottom={10}>
+          <Typography fontWeight={'bold'} padding={3} variant="h4" textAlign={'center'}>Post a Job</Typography>
 
           <InputLabel sx={{marginBottom:1, marginTop:2, fontSize:'15px', fontWeight:'bold'}}>Title</InputLabel>
           <TextField name="title" onChange={handleChange} value={inputs.title}  margin ='normal' variant="filled"/>
