@@ -18,3 +18,9 @@ input {
 button {
     font-size: large;
 }
+
+.scrollable {
+    background-color: #bd99c5;
+    z-index: 0;
+    font-size: large;
+}

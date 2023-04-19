@@ -21,7 +21,7 @@ const Account = () => {
     console.log(transactions);
    
     return (
-        <div class="bg-container">
+        <div class="scrollable">
             <div class="center-screen">
                 <Avatar alt="Remy Sharp" src="./man3.jpg" sx={{ width: 80, height: 80 }}></Avatar>
                 

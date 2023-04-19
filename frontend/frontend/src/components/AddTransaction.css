@@ -1,14 +1,14 @@
-.create-job {
-    padding: 10px;
-    height: 1000px;
-    margin-bottom: 100px;
-}
-
 .bg-container {
     background:rgb(189, 153, 197);
     position:absolute;
-    top:60px;
+    top:0px;
     right:0px;
     bottom:0px;
     left:0px;
+    height: 1000px;
+    overflow: scroll;
+}
+
+.create-job {
+    height: 2200px;
 }

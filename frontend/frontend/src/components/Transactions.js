@@ -17,12 +17,12 @@ sendRequest().then(data=> setTransactions(data.transactions));//sending request 
  console.log(transactions);
  
  return (
-  <div class="bg-container">
     <div class="scrollable">
+      <div class="inner">
      {transactions && transactions.map((transaction, index) => (
       <Transaction id={transaction._id} isUser={localStorage.getItem("userId") ===transaction.user._id} title={transaction.title} description={transaction.description} userName={transaction.user.name} phone={transaction.phone} location={transaction.location}/>
      ))} 
-    </div>
+      </div>
     </div>
   );
 };

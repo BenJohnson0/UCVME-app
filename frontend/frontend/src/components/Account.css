@@ -22,10 +22,16 @@
   .bg-container {
     background:rgb(189, 153, 197);
     position:relative ;
-    top:60px;
+    top:0px;
     right:0px;
     bottom:0px;
     left:0px;
     height: 2000px;
     overflow: scroll;
+}
+
+.scrollable {
+  z-index: 0;
+  background-color: #bd99c5;
+  overflow: hidden;
 }

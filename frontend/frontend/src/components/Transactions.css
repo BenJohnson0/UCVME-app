@@ -1,14 +1,10 @@
-.bg-container {
+.inner {
     background:rgb(189, 153, 197);
-    position:absolute;
-    top:60px;
-    right:0px;
-    bottom:0px;
-    left:0px;
-    height: 1000px;
-    overflow: scroll;
+    min-height: 3000px;
+    overflow: hidden;
 }
 
 .scrollable {
-    height: 10000px;
+    z-index: 0;
+    background-color: #bd99c5;
 }

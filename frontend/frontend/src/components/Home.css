@@ -5,14 +5,17 @@
     right:0px;
     bottom:0px;
     left:0px;
+    height: 200px;
+    overflow: scroll;
 }
 
-.bg-img {
+.title {
     position: absolute;
-    top: 28%; left: 40%;
-    transform: translate(-50%,-50%);
-    width: 200px;
-    height: 200px;
+    top:3%;
+    right:0px;
+    bottom:0px;
+    left:33%;
+    height: 1000px;
 }
 
 .heading {
@@ -29,20 +32,4 @@ h1 .heading-color{
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     color:#FAF9F6 ;
-}
-
-.title {
-    position: absolute;
-    top: 12%; left: 47%;
-    transform: translate(-50%,-50%);
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-  }
-
-img {
-    object-fit:cover;
 }
