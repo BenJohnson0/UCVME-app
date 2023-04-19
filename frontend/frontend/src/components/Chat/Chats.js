@@ -31,6 +31,7 @@ export const Chats = () => {
 
 
     return (
+      <div class="scrollable">
         <div className="messages">
         
         <div className="searchbar">
@@ -42,6 +43,7 @@ export const Chats = () => {
         />
 
         <DropdownFilter />
+        </div>
         </div>
         
         

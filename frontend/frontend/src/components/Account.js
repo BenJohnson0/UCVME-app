@@ -21,7 +21,8 @@ const Account = () => {
     console.log(transactions);
    
     return (
-        <div class="center-screen">
+        <div class="bg-container">
+            <div class="center-screen">
                 <Avatar alt="Remy Sharp" src="./man3.jpg" sx={{ width: 80, height: 80 }}></Avatar>
                 
                 {/*Logged in username should appear on account page*/}
@@ -34,8 +35,7 @@ const Account = () => {
             <div class="details">
                 <FirebaseUpload />
             </div>
-
-            
+            </div>
         </div>
 
        

@@ -35,7 +35,7 @@ const Transaction = ({title, description, userName, phone, location, isUser, id}
   return (
     <div>  
       {" "}
-    <Card sx={{ width: "60%", margin:'auto', marginTop:2, padding:2, boxShadow: "5px 5px 10px #ccc" }}>
+    <Card sx={{ width: "60%", margin:'auto', marginTop:2, padding:2, bgcolor:'#ddb8e5', border: 2 }}>
     {isUser && (
         <Box display='flex'>
           <IconButton onClick={handleEdit} sx={{marginLeft:"auto"}}><EditOutlinedIcon/></IconButton>

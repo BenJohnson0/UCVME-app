@@ -4,15 +4,28 @@
     align-items: center;
     text-align: center;
     min-height: 25vh;
-    background-color: #ededed;
+    background-color: #104c71;
   }
 
   .account-name {
     padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #104C71;
+    color: #fff;
   }
 
   .details {
-    padding-left: 15%;
+    padding-left: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
   }
+
+  .bg-container {
+    background:rgb(189, 153, 197);
+    position:relative ;
+    top:60px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    height: 2000px;
+    overflow: scroll;
+}

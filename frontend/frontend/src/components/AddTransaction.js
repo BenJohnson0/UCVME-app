@@ -37,26 +37,28 @@ const AddTransaction = () => {
   }
    //defining object before rendering component 
   return (
+    <div class="bg-container">
     <div class="create-job">
       <form onSubmit={handleSubmit} >
-        <Box border={1} borderRadius={2} boxShadow="5px 5px 5px #ccc" padding={3} margin={"auto"} display='flex' flexDirection={'column'} width={"50%"} height={"10%"} marginTop={10} marginBottom={10}>
-          <Typography fontWeight={'bold'} padding={3} variant="h4" textAlign={'center'}>Post a Job</Typography>
+        <Box border={2} borderRadius={4} padding={3} margin={"auto"} bgcolor='#ddb8e5' display='flex' flexDirection={'column'} width={"50%"} height={"10%"} marginTop={10} marginBottom={10}>
+          <Typography fontWeight={'bold'} padding={1.2} variant="h4" textAlign={'center'}>Post a Job</Typography>
 
-          <InputLabel sx={{marginBottom:1, marginTop:2, fontSize:'15px', fontWeight:'bold'}}>Title</InputLabel>
+          <InputLabel sx={{marginBottom:1, marginTop:1, fontSize:'15px', fontWeight:'bold', padding:'0.5'}}>Title</InputLabel>
           <TextField name="title" onChange={handleChange} value={inputs.title}  margin ='normal' variant="filled"/>
 
-          <InputLabel sx={{marginBottom:1, marginTop:2, fontSize:'15px', fontWeight:'bold'}} >Description</InputLabel>
+          <InputLabel sx={{marginBottom:1, marginTop:1, fontSize:'15px', fontWeight:'bold'}} >Description</InputLabel>
           <TextField name="description" onChange={handleChange} value={inputs.description}  margin ='normal' variant="filled"/>
 
-          <InputLabel sx={{marginBottom:1, marginTop:2, fontSize:'15px', fontWeight:'bold'}}>Phone Number</InputLabel>
+          <InputLabel sx={{marginBottom:1, marginTop:1, fontSize:'15px', fontWeight:'bold'}}>Phone Number</InputLabel>
           <TextField name="phone" onChange={handleChange} value={inputs.phone}  margin ='normal' variant="filled"/>
 
-          <InputLabel sx={{marginBottom:1, marginTop:2, fontSize:'15px', fontWeight:'bold'}}>Location</InputLabel>
+          <InputLabel sx={{marginBottom:1, marginTop:1, fontSize:'15px', fontWeight:'bold'}}>Location</InputLabel>
           <TextField name="location" onChange={handleChange} value={inputs.location}  margin ='normal' variant="filled"/>
           
           <Button sx={{borderRadius:2, marginTop:3}} variant="contained" color="primary" margin="normal" type="submit">Add</Button>
         </Box>
       </form>
+    </div>
     </div>
   );
 };

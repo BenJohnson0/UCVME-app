@@ -4,6 +4,7 @@ import axios from "axios"; //axios to send request to the backend
 import { useDispatch } from 'react-redux';
 import { authActions } from '../store';
 import { useNavigate } from 'react-router-dom';
+import './Auth.css';
 
 const Auth = () => {
   const direct = useNavigate(); //to automatically direct the user to the "My Transactions" page
@@ -53,7 +54,8 @@ const Auth = () => {
   };
   
   return (
-    <div>
+    <div class="bg-container">
+      <div class="input-form">
       <form onSubmit={handleSubmit}>
         <Box display="flex" flexDirection={'column'} alignItems='center' justifyContent={'center'} padding={3} margin='auto' marginTop={5} borderRadius={5}>
           <Typography padding={3} textAlign="center" fontSize={25}>
@@ -62,10 +64,11 @@ const Auth = () => {
          { isSignup && <TextField name="name" onChange={handleChange} value={inputs.name} marginTop={0} sx={{width: { sm: 120, md: 260 }, "& .MuiInputBase-root": {height: 50}}} id="standard-basic" label="Enter Name" variant="filled" />} {" "}
          <TextField name="email" onChange={handleChange} value={inputs.email} type={'email'} margin="normal" sx={{width: { sm: 120, md: 260 }, "& .MuiInputBase-root": {height: 50}}} id="standard-basic" label="Enter Email" variant="filled"/>
          <TextField name="password" onChange={handleChange} value={inputs.password} type={'password'} margin="normal" sx={{width: { sm: 120, md: 260 }, "& .MuiInputBase-root": {height: 50}}} id="standard-basic" label="Enter Password" variant="filled"/>
-         <Button type='submit' sx={{borderRadius:1, marginTop:3, background:"#104C71"}} variant="contained" color="primary" margin="normal">{isSignup ? "Sign up" : "Login"}</Button>
+         <Button type='submit' sx={{borderRadius:4, marginTop:3, background:"#104C71"}} variant="contained" color="primary" margin="normal">{isSignup ? "Sign up" : "Login"}</Button>
          <Button onClick={() => setIsSignup(!isSignup)} sx={{borderRadius:1, marginTop:2}} > {isSignup ? "Login": "Not registered? Sign up"}</Button>
         </Box>
       </form>
+      </div>
     </div>
   )
 }
