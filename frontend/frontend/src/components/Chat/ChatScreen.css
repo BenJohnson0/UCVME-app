@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .chatScreen__text {
@@ -15,11 +16,13 @@
     text-align: center;
     padding: 20px;
     color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
 }
 
 .chatScreen__textUser {
     margin-left: auto;
-    background-color: #29b3cd;
+    background-color: #104c71;
     padding: 15px;
     border-radius: 20px;
     color: #fff;
@@ -32,21 +35,21 @@
     bottom: 0;
     width: 100%;
     border-top: 1px solid lightgray;
-    background-color: rgb(109, 173, 219);
+    background-color: #800080;
 }
 
 .chaScreen__inputFeal {
     flex: 1;
     padding: 10px;
     border: none;
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
 }
 
 .chatScreen__inputButton {
     border: none;
     margin-right: 20px;
-    background-color: #fff;
+    background-color: #c6c6c6;
     font-weight: bolder;
-    color: #485dba;
+    color: #800080;
     cursor: pointer;
 }
