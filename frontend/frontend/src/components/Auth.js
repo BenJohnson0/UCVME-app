@@ -19,6 +19,7 @@ const Auth = () => {
     setInputs((previousState) => ({
       ...previousState, //store previous state
       [e.target.name] : e.target.value, //add and update to new value
+
     })); 
   };
 
@@ -42,15 +43,21 @@ const Auth = () => {
     if(isSignup) {
       sendRequest("signup").then((data) => localStorage.setItem("userId", data.user._id))
       .then(()=> dispatch(authActions.login()))
-      .then(()=>direct("/myTransactions"))
+      .then(()=>direct("/"))
       .then((data)=>console.log(data)); //updating the state and getting action
     }
     else {
       sendRequest().then((data) => localStorage.setItem("userId", data.user._id))
       .then(()=> dispatch(authActions.login()))
-      .then(()=>direct("/myTransactions"))
+      .then(()=>direct("/"))
       .then((data)=>console.log(data));//calling login function
     }
+
+    {/* Users should know if their email or password is incorrect
+    if(inputs.email === users.email) {
+      alert("Incorrect email!")
+    } */}
+
   };
   
   return (
@@ -62,8 +69,8 @@ const Auth = () => {
           {isSignup ? "Sign up" : "Login"}
           </Typography>
          { isSignup && <TextField name="name" onChange={handleChange} value={inputs.name} marginTop={0} sx={{width: { sm: 120, md: 260 }, "& .MuiInputBase-root": {height: 50}}} id="standard-basic" label="Enter Name" variant="filled" />} {" "}
-         <TextField name="email" onChange={handleChange} value={inputs.email} type={'email'} margin="normal" sx={{width: { sm: 120, md: 260 }, "& .MuiInputBase-root": {height: 50}}} id="standard-basic" label="Enter Email" variant="filled"/>
-         <TextField name="password" onChange={handleChange} value={inputs.password} type={'password'} margin="normal" sx={{width: { sm: 120, md: 260 }, "& .MuiInputBase-root": {height: 50}}} id="standard-basic" label="Enter Password" variant="filled"/>
+         <TextField name="email" onChange={handleChange} value={inputs.email} type={'email'} margin="normal" sx={{width: { sm: 120, md: 260 }, "& .MuiInputBase-root": {height: 50}}} id="standard-basic" label="Enter Email" variant="filled" required="true"/>
+         <TextField name="password" onChange={handleChange} value={inputs.password} type={'password'} margin="normal" sx={{width: { sm: 120, md: 260 }, "& .MuiInputBase-root": {height: 50}}} id="standard-basic" label="Enter Password" variant="filled" required="true"/>
          <Button type='submit' sx={{borderRadius:4, marginTop:3, background:"#104C71"}} variant="contained" color="primary" margin="normal">{isSignup ? "Sign up" : "Login"}</Button>
          <Button onClick={() => setIsSignup(!isSignup)} sx={{borderRadius:1, marginTop:2}} > {isSignup ? "Login": "Not registered? Sign up"}</Button>
         </Box>
