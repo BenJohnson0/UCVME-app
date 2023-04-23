@@ -8,7 +8,7 @@ const Transactions = () => {
   const sendRequest = async () => {
     const res = await axios.get("http://localhost:5000/api/transaction").catch(err =>console.log(err));
     const data = await res.data;
-    return data;
+    return data; 
   }
 
  useEffect(()=> {

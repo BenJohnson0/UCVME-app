@@ -29,7 +29,7 @@ const Transaction = ({title, description, userName, phone, location, isUser, id}
 
   //link user to chat screen directly from job listing
   const goToChat = () => {
-    navigate("/chat/${id}")
+    navigate(`/chat/${id}`)
   }
 
   return (
