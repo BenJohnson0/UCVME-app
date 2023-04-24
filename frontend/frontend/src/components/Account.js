@@ -6,7 +6,6 @@ import AccountName from './AccountName.js';
 import FirebaseUpload from './FirebaseUpload.js';
 import { getStorage, ref, deleteObject } from "firebase/storage";
 
-
 const Account = () => {
 
     const [transactions , setTransactions] =  useState();

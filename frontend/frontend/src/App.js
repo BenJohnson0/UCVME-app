@@ -15,6 +15,9 @@ import ChatScreen from "./components/Chat/ChatScreen.js";
 import Chats from "./components/Chat/Chats.js";
 import Account from "./components/Account.js";
 
+//Dylans CV Card
+import CvCard from "./components/CvCard.js";
+
 function App() {
   const dispatch = useDispatch();
   //grabbing the state of redux
@@ -44,6 +47,9 @@ function App() {
         <Route path="/chat/:id" element={<ChatScreen/>}/>
         <Route path="/account" element={<Account/>}/>
         <Route path="/" element={<Home/>}/>
+
+        //Dylan's CV Card
+        <Route path="/cv" element={<CvCard/>}/>
       </Routes>
     </main>
   </React.Fragment>;

@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import BallotIcon from '@mui/icons-material/Ballot';
 import axios from 'axios';
 
 const Transaction = ({title, description, userName, phone, location, isUser, id}) => {
@@ -32,6 +33,10 @@ const Transaction = ({title, description, userName, phone, location, isUser, id}
     navigate(`/chat/${id}`)
   }
 
+  const goToCV = () => {
+    navigate('/cv')
+  }
+
   return (
     <div>  
       {" "}
@@ -40,7 +45,8 @@ const Transaction = ({title, description, userName, phone, location, isUser, id}
         <Box display='flex'>
           <IconButton onClick={handleEdit} sx={{marginLeft:"auto"}}><EditOutlinedIcon/></IconButton>
           <IconButton onClick={handleDelete} ><DeleteOutlinedIcon color="warning"/></IconButton>
-          <IconButton onClick={goToChat} ><MessageIcon color="info"/></IconButton>
+          <IconButton onClick={goToChat} ><MessageIcon color="info" fontSize="large"/></IconButton>
+          <IconButton onClick={goToCV} ><BallotIcon color="success" fontSize="large"/></IconButton>
         </Box>
       )}
     <CardContent>
