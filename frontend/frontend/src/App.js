@@ -10,13 +10,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "./store";
 import Home from "./components/Home";
 
+//Added by Dylan
+import CvCard from "./components/CvCard";
+
 //added by Ben
 import ChatScreen from "./components/Chat/ChatScreen.js";
 import Chats from "./components/Chat/Chats.js";
 import Account from "./components/Account.js";
-
-//Dylans CV Card
-import CvCard from "./components/CvCard.js";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,14 +42,15 @@ function App() {
         <Route path="/myTransactions" element={<UserTransactions/>}/>
         <Route path="/myTransactions/:id" element={<TransactionInfo/>}/>
 
-        //added by Ben
+        {/*added by Ben*/}
         <Route path="/chat" element={<Chats/>}/>
         <Route path="/chat/:id" element={<ChatScreen/>}/>
         <Route path="/account" element={<Account/>}/>
         <Route path="/" element={<Home/>}/>
 
-        //Dylan's CV Card
-        <Route path="/cv" element={<CvCard/>}/>
+        {/*Added by Dylan*/} 
+        <Route path="/CvCard" element={<CvCard />} />
+
       </Routes>
     </main>
   </React.Fragment>;

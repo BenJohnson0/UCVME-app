@@ -17,6 +17,8 @@ const Header = () => {
                 <Tabs textColor='inherit'>
                     <Tab LinkComponent={Link} to="/" label="Home"/>
                     <Tab LinkComponent={Link} to="/account" label="Account"/>
+                    {/*Added by Dylan*/} 
+                    <Tab LinkComponent={Link} to="/CvCard" label="CV"/>
                     <Tab LinkComponent={Link} to="/chat" label="Chat"/>
                     <Tab LinkComponent={Link} to="/myTransactions" label="My Posts"/>
                     <Tab LinkComponent={Link} to="/transactions/create" label="Post a Job"/>
