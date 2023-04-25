@@ -20,13 +20,13 @@ const Header = () => {
                     {/*Added by Dylan*/} 
                     <Tab LinkComponent={Link} to="/CvCard" label="CV"/>
                     <Tab LinkComponent={Link} to="/chat" label="Chat"/>
-                    <Tab LinkComponent={Link} to="/myTransactions" label="My Posts"/>
-                    <Tab LinkComponent={Link} to="/transactions/create" label="Post a Job"/>
                 </Tabs>
             </Box> }
             <Box display="flex" marginLeft={'auto'}>
             <Tabs textColor='inherit' > 
-                <Tab LinkComponent={Link} to="/transactions" label="Jobs"/>
+                <Tab LinkComponent={Link} to="/myTransactions" label="My Posts"/>
+                <Tab LinkComponent={Link} to="/transactions/create" label="Post a Job"/>
+                <Tab LinkComponent={Link} to="/transactions" label="Available Jobs"/>
                  </Tabs>
                 { !isLoggedIn && <Button LinkComponent={Link} to="/auth" variant='contained' sx={{margin: 1, borderRadius:10, background:"#104C71"}} >Login</Button>}
                 { isLoggedIn && <Button onClick={()=>dispatch(authActions.logout())} LinkComponent={Link} to="/auth" variant='contained' sx={{margin: 1, borderRadius:10, background:"#104C71"}}>Log out</Button>}
