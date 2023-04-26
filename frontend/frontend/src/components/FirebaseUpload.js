@@ -6,7 +6,6 @@ import "./FirebaseUpload.css";
 
 function FirebaseUpload() {
     const [imgUrl, setImgUrl] = useState(null);
-    const [data, setData] = useState([]); //for retreiving the data from firebase
     const [progresspercent, setProgresspercent] = useState(0);
     const [videoPreviewUrl, setVideoPreviewUrl] = useState(null); //for video preview
  

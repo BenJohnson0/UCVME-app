@@ -13,7 +13,7 @@ const UserTransactions = () => {
     return data;
 
   }
-  useEffect(() => {
+  useEffect(() => { 
   sendRequest().then((data)=> setTransactions(data.transactions.transactions));
    }, []); //getting the id
    console.log (transactions); 

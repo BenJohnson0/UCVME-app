@@ -53,11 +53,6 @@ const Auth = () => {
       .then((data)=>console.log(data));//calling login function
     }
 
-    {/* Users should know if their email or password is incorrect
-    if(inputs.email === users.email) {
-      alert("Incorrect email!")
-    } */}
-
   };
   
   return (

@@ -1,5 +1,5 @@
 //Import relevant resources
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect} from "react";
 import { ChatData } from "./ChatData";
 import Chat from './Chat.js';
 import './ChatFilter.css';
